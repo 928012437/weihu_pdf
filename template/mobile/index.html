@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-cn" class="hb-loaded">
+<head>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0"/>
+    <title>查询结果</title>
+    <link rel="stylesheet" href="../addons/weihu_menpiao/static/sm.min.css">
+    <script type='text/javascript' src='../addons/weihu_menpiao/static/zepto.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='../addons/weihu_menpiao/static/sm.min.js' charset='utf-8'></script>
+    <style>
+        .list-block{
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+<div class="page-group">
+    <div class="page" >
+        <header class="bar bar-nav">
+            <h1 class='title'>查询结果</h1>
+        </header>
+
+        <div class="content">
+
+            {loop $pdflist $v}
+            <div class="card">
+                <div class="card-header">{$v['xmname']}:</div>
+                <div class="card-content">
+                    <div class="list-block media-list">
+                        <ul>
+                            <li class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                        <div class="item-title">姓名：{$v['name']}</div>
+                                    </div>
+                                    <div class="item-subtitle">手机号：{$v['mobile']}</div>
+                                    <div class="item-subtitle">身份证号：{$v['idcard']}</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span>年龄：{$v['age']}</span>
+                    <span><button class="button button-info" onclick="chakan('{$v['id']}')">查看</button></span>
+                </div>
+            </div>
+            {/loop}
+
+        </div>
+    </div>
+</div>
+</body>
+
+<script>
+function chakan(id) {
+    location.href="{php echo $this->createMobileurl('detail')}&id="+id;
+}
+</script>
+
+</html>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns="http://20190709.jnweishangjia.com" versionCode="2.0">
+    <application setting="true">
+        <name><![CDATA[微狐pdf管理]]></name>
+        <identifie><![CDATA[weihu_pdf]]></identifie>
+        <version><![CDATA[1.0]]></version>
+        <type><![CDATA[business]]></type>
+        <ability><![CDATA[微狐pdf管理]]></ability>
+        <description><![CDATA[微狐pdf管理]]></description>
+        <author><![CDATA[案山子]]></author>
+        <url><![CDATA[http://20190709.jnweishangjia.com]]></url>
+    </application>
+    <platform>
+        <subscribes>
+        </subscribes>
+        <handles>
+            <message type="text" />
+        </handles>
+        <rule embed="false" />
+        <card embed="false" />
+    </platform>
+    <bindings>
+        <cover>
+            <entry title="查询入口" do="index" />
+        </cover>
+        <menu>
+            <entry title="pdf管理" do="list" direct="false" />
+            <entry title="设置" do="set" direct="false" />
+        </menu>
+    </bindings>
+    <install></install>
+    <uninstall></uninstall>
+    <upgrade></upgrade>
+</manifest>
